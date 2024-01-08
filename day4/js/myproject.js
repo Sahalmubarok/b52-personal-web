@@ -16,13 +16,16 @@ function addMyproject(e) {
     const Typescript = document.getElementById("inputTypescript").checked
 
     const Image = document.getElementById("inputImage").files
+    const p_duration = durationInDays(StartDate, EndDate)
 
     const imageLink = URL.createObjectURL(Image[0])
+    const duration = durationInMonth(p_duration) 
 
     const Myproject = {
         projectName,
         StartDate,
         EndDate,
+        duration,
         Description,
         Nodejs,
         Reactjs,
@@ -32,6 +35,9 @@ function addMyproject(e) {
     }
 
     Myprojects.unshift(Myproject)
+    console.log("Myprojects", Myprojects)
+    renderMyproject()
+}
 
     // console.log("projectName", projectName)
     // console.log("StartDate", StartDate)
@@ -42,11 +48,6 @@ function addMyproject(e) {
     // console.log("Nextjs", Nextjs)
     // console.log("Typescript", Typescript)
     // console.log("Image", imageLink)
-
-    renderMyproject()
-    console.log("Myprojects", Myprojects)
-
-}
 
 function renderMyproject() {
     let html = ''
@@ -59,7 +60,7 @@ function renderMyproject() {
             </div>
             <div class="card1">
             <a href="myproject-detail.html"><h3>${Myprojects[index].projectName}</h3></a>
-                <p>Durasi 3 bulan</p>
+                <p>Durasi: ${Myprojects[index].duration}</p>
             </div>
             <div class="card2">
                 <p>${Myprojects[index].Description}</p>
@@ -103,4 +104,37 @@ function renderTechImages(Object) {
     return renderIcon;
 }
 
+// Detail project
+// add duration in days
+function durationInDays(StartDate, EndDate) {
+    // 1000 msec, 60 sec, 60 minutes, 24 hours
+    const oneDay = 1000 * 60 * 60 * 24;
+
+    const startDate = new Date(StartDate).getTime();
+    const endDate = new Date(EndDate).getTime();
+    const durationMs = endDate - startDate;
+
+    // add 1 day if start & end is same day
+    return Math.floor(durationMs / oneDay);
+}
+
+// add duration in month
+function durationInMonth(days) {
+    monthDuration = Math.floor(days / 30);
+    daysDuration = days % 30;
+
+    // if less than a month return to days
+    if (monthDuration == 0) {
+        return `${daysDuration} Days`;
+    }
+
+    if (daysDuration > 20) {
+        monthDuration++;
+    }
+    else if (daysDuration <= 20 && daysDuration > 10) {
+        monthDuration += 0.5;
+    }
+
+    return `${monthDuration} Months`
+}
 
