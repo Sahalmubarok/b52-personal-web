@@ -236,4 +236,21 @@
 
 @media only screen and (max-width: 567px) {
     
+    .ct-form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 70px;    
+    }
+
+    .ct-form1 {
+        width: 100%;
+    }
+
+    .ct-form2 {
+        width: 100%;
+    }
+
+    .input-MP {
+        margin-bottom: 0%;
+    }
 }

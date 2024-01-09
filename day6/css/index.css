@@ -9,7 +9,7 @@
 
 .contain {
     display: flex;
-    width: 900px; 
+    width: 80%; 
     margin: 90px auto;
     padding: 30px;
     gap: 50px;
@@ -20,7 +20,7 @@
 
 .container {
     display: flex; 
-    width: 1150px;
+    width: 60%;
     flex-direction: column; 
     gap: 30px;
 }
@@ -45,8 +45,8 @@
 }
 
 .box-img-name {
-    height: 415px; 
-    width: 600px;
+    height: 10%; 
+    width: 30%;
     box-shadow: 0 0 7px; 
     border-radius: 8px;
     background-color: #f8f5f5;
@@ -57,7 +57,6 @@
 }
 
 .box-name {
-    line-height: 0.5;
     text-align: center;
     margin: 25px;
 }
