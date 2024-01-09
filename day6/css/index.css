@@ -20,6 +20,7 @@
 
 .container {
     display: flex; 
+    width: 1150px;
     flex-direction: column; 
     gap: 30px;
 }
@@ -45,7 +46,7 @@
 
 .box-img-name {
     height: 415px; 
-    width: 300px;
+    width: 600px;
     box-shadow: 0 0 7px; 
     border-radius: 8px;
     background-color: #f8f5f5;
@@ -59,4 +60,28 @@
     line-height: 0.5;
     text-align: center;
     margin: 25px;
+}
+
+
+@media only screen and (max-width: 567px) {
+
+    .contain {
+        flex-direction: column;
+        width: 400px; 
+        margin: 90px auto;
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .sosmed {
+        margin: auto;
+    }
+
+    .box-img-name {
+        margin: auto;
+        width: 300px;
+    }
+
 }
