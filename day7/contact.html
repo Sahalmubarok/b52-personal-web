@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <head>
+        <title>Contact Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/nav.css">
+    </head>
+
+    <body class="body">
+        <nav class="nav">
+            <div class="nav1">
+                <ul class="nav-ul">
+                    <li>
+                        <img class="nav-logo" src="image/dumbways.png" alt="logo dumbways">
+                    </li>
+                    <li>
+                        <a href="index.html" class="nav-btn">Home</a>
+                    </li>
+                    <li>
+                        <a href="myproject.html" class="nav-btn">My Project</a> 
+                    </li>
+                    <li>
+                        <a href="testimonial.html" class="nav-btn">Testimonials</a> 
+                    </li>
+                </ul>
+                <div class="btn-contact">
+                    <li>
+                        <a href="contact.html" class="link-contact">Contact Me</a>
+                    </li>
+                    <i class="fa-solid fa-bars fa-2x hamburger-btn" id="hamburger-button" style="margin-right: 20px; cursor: pointer;" 
+                    onclick="openHamburger()"></i>
+                </div>
+            </li>
+        </nav>
+        <div class="hamburger-nav-container hidden" id="hamburger-nav-container">
+            <a class="hamburger-nav-link" href="index.html">Home</a>
+            <a class="hamburger-nav-link" href="myproject.html">Myproject</a>
+            <a class="hamburger-active" href="contact.html">Contact</a>
+        </div>
+
+        <div class="form-contact">
+            <div class="form-contact1">
+                <h2 class="contact-title">GET IN TOUCH</h2>
+                <label class="label-contact" for="name">Name</label>
+                <input type="text" class="input-contact" id="name">
+                <label class="label-contact" for="email">Email</label>
+                <input type="text" class="input-contact" id="email">
+                <label class="label-contact" for="phone">Phone Number</label>
+                <input type="text" class="input-contact" id="phone">
+                <label class="label-contact" for="subject">Subject</label>
+                <select class="input-contact" id="subject">
+                    <option>Fullstack Developer</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                </select>
+                <label class="label-contact" for="message">Your Message</label>
+                <textarea cols="30" rows="5" class="input-contact" id="message"></textarea>
+                <div class="btn-submit1">
+                    <button class="btn-submit" onclick="submitData()" >submit</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/contact.js"></script>
+        <script src="js/nav.js"></script>
+        </script>
+    </body>
+</html>
