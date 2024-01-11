@@ -64,6 +64,7 @@ async function filterTestimonial(rating) {
                         <img src="${value.image}" class="profile-testimonial" />
                         <p class="quote">"${value.content}"</p>
                         <p class="author">- ${value.author}</p>
+                        <p class="author">${value.rating} <i class="fa-solid fa-star"></i></p>
                     </div>`
         })
         
