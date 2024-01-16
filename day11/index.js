@@ -1,5 +1,4 @@
 const express = require('express')
-const path = require('path')
 const app = express()
 const port = 3000
 
@@ -14,7 +13,7 @@ app.use(express.urlencoded({ extended: false }))
 // response: tanggapa dari server ke client
 app.get('/', home)
 app.get('/contact', contact)
-app.get('/project', project)
+// app.get('/project', project)
 app.post('/addProject', addProject)
 app.get('/addProject', addProjectViews)
 app.get('/addDetail/:id', addDetail)
@@ -27,30 +26,30 @@ function contact(req, res){
   res.render('bootstrap-contact')
 }
 
-function project(req, res){
-  const data = [
-    {
-      id: 1,
-      title: "Data 1",
-      content: "Content 1"
-    },
-    {
-      id: 2,
-      title: "Data 2",
-      content: "Content 2"
-    },
-    {
-      id: 3,
-      title: "Data 3",
-      content: "Content 3"
-    }
-  ]
-  res.render('bootstrap-project', {data})
-}
+// function project(req, res){
+//   const data = [
+//     {
+//       id: 1,
+//       title: "Data 1",
+//       content: "Content 1"
+//     },
+//     {
+//       id: 2,
+//       title: "Data 2",
+//       content: "Content 2"
+//     },
+//     {
+//       id: 3,
+//       title: "Data 3",
+//       content: "Content 3"
+//     }
+//   ]
+//   res.render('bootstrap-project', {data})
+// }
 
 function addProject(req, res){
   const {projectName, startDate, endDate, desc, checkbox} = req.body
-  
+
   console.log('Project:', projectName)
   console.log('Start Date:', startDate)
   console.log('End Date:', endDate)
