@@ -54,12 +54,12 @@ function renderMyproject() {
     
     for (let index = 0; index < Myprojects.length; index++) {
         html += `
-        <div class="MP-card1">
+        <div class="MP-card">
             <div class="img-utama">
                 <img src="${Myprojects[index].Image}" alt="Foto Profil"> 
             </div>
             <div class="card1">
-            <a href="/addDetail/12"><h3>${Myprojects[index].projectName}</h3></a>
+            <a href="myproject-detail.html"><h3>${Myprojects[index].projectName}</h3></a>
                 <p>Durasi: ${Myprojects[index].duration}</p>
             </div>
             <div class="card2">
@@ -89,16 +89,16 @@ function renderTechImages(Object) {
     let renderIcon = "";
 
     if (Object.Nodejs) {
-        renderIcon += `<img src="assets/icon/nodejs.png">`;
+        renderIcon += `<img src="icon/nodejs.png">`;
     }
     if (Object.Nextjs) {
-        renderIcon += `<img src="assets/icon/nextjs.png">`;
+        renderIcon += `<img src="icon/nextjs.png">`;
     }
     if (Object.Reactjs) {
-        renderIcon += `<img src="assets/icon/reactjs.png">`;
+        renderIcon += `<img src="icon/reactjs.png">`;
     }
     if (Object.Typescript) {
-        renderIcon += `<img src="assets/icon/typescript.png">`;
+        renderIcon += `<img src="icon/typescript.png">`;
     }
 
     return renderIcon;

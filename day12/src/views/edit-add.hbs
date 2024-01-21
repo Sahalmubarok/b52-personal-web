@@ -37,29 +37,30 @@
         </nav>
 
         <div class=" p-1 mb-1 mt-5 text-emphasis-dark">
-            <form method="post" action="/addProject" class="row col-md-6 mx-auto">
-                <h2 class="text-center">ADD MY PROJECT</h2>
+            <form method="post" action="/edit-add" class="row col-md-6 mx-auto">
+                <h2 class="text-center">EDIT MY PROJECT</h2>
+                <input type="hidden" name="id" value="{{data.id}}">
                 <div class="mb-3">
                     <label for="projectName" class="form-label">Project Name</label>
-                    <input type="text" class="form-control" name="projectName" id="projectName" >
+                    <input type="text" class="form-control" name="projectName" id="projectName" value="{{data.projectName}}" >
                 </div>
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Start Date</label>
-                        <input type="text" name="startDate" class="form-control" id="inputStart" onfocus="(this.type='date')"
+                        <input type="text" name="startDate" class="form-control" id="inputStart" value="{{data.startDate}}" onfocus="(this.type='date')"
                         onblur="if(!this.value)this.type='text'" />
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="form-label">End Date</label>
-                        <input type="text" name="endDate" class="form-control" id="inputEnd"  onfocus="(this.type='date')"
+                        <input type="text" name="endDate" class="form-control" id="inputEnd" value="{{data.endDate}}" onfocus="(this.type='date')"
                         onblur="if(!this.value)this.type='text'" />
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label" for="message">Description</label>
-                    <textarea class="form-control" name="desc" id="message" rows="3"></textarea>
+                    <textarea class="form-control" name="desc" id="message" rows="3">{{data.desc}}</textarea>
                 </div>
 
                 <!-- technologies -->
@@ -69,18 +70,22 @@
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <div class="d-flex align-items-center gap-2 "> 
-                                    <input class="form-check-input mt-0" name="node" id="inputNodejs" type="checkbox"> Node Js
+                                    <input class="form-check-input mt-0" name="node" id="inputNodejs" value="node" type="checkbox"
+                                    {{#if data.node}} checked {{/if}}> Node Js
                                 </div>
                                 <div class="d-flex align-items-center gap-2"> 
-                                    <input class="form-check-input mt-0" name="react" id="inputReactjs" type="checkbox"> React Js 
+                                    <input class="form-check-input mt-0" name="react" id="inputReactjs" value="react" type="checkbox"
+                                    {{#if data.react}} checked {{/if}}> React Js 
                                 </div>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <div class="d-flex align-items-center gap-2"> 
-                                    <input class="form-check-input mt-0" name="next" id="inputNextjs" type="checkbox"> Next Js 
+                                    <input class="form-check-input mt-0" name="next" id="inputNextjs" value="next" type="checkbox"
+                                    {{#if data.next}} checked {{/if}}> Next Js 
                                 </div>
                                 <div class="d-flex align-items-center gap-2"> 
-                                    <input class="form-check-input mt-0" name="typescript" id="inputTypescript" type="checkbox"> Typescript 
+                                    <input class="form-check-input mt-0" name="typescript" id="inputTypescript" value="typescript" type="checkbox"
+                                    {{#if data.typescript}} checked {{/if}}> Typescript 
                                 </div>
                             </div>
                         </div>
@@ -95,7 +100,7 @@
                     <label class="input-group-text" id="lbl-choose" for="inputImage">Choose</label>
                     <input type="file" class="form-control" id="inputImage">
                     <label class="input-group-text">
-                    <img src="assets/image/file.png" alt="file" />
+                    <img src="/assets/image/file.png" alt="file" />
                     </label>
                 </div>
 
@@ -107,12 +112,12 @@
 
 
         <!-- Output Content-->
-        {{!-- <div style=" background-color: white ;">
+        <div style=" background-color: white ;">
             <div class="row text-center mt-5 bg-white" id="judul" >
                 <h1>MY PROJECT</h1>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4 p-5 bg-white gap-3 " style="margin-left: 90px;" id="contents">
-                <div class="MP-card">
+                <!-- <div class="MP-card">
                     <div class="img-utama"><img src="image/logo1.jpg" alt="Foto Profil"> </div>
                     <div class="card1">
                     <a href="/addDetail"><h3>Judul</h3></a>
@@ -132,7 +137,7 @@
                     </div>
                 </div>
             </div>
-        </div>  --}}
+        </div>
 
         <script src="assets/js/addproject.js"></script>
         <script src="assets/js/nav.js"></script>
