@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid gap-3">
+            <a class="navbar-brand ms-4" href="#">
+                <img src="/assets/image/dw.png" style="height: 40px;">
+            </a>
+            <!-- toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {{#if isLogin}}
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/addmyproject">Add Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonial">Testimonial</a>
+                    </li>
+                </ul>
+                {{else}}
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="/addmyproject">Add Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonial">Testimonial</a>
+                    </li>
+                </ul>
+                {{/if}}
+                {{#if isLogin}}
+                <ul class="navbar-nav me-2 mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <span class="nav-link ">Welcome, {{user}}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/logout">Logout</a>
+                    </li>
+                </ul>
+                {{else}}
+                <ul class="navbar-nav me-2 mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                </ul>
+                {{/if}}
+                <a href="/contact">
+                    <button class="btn btn-primary me-4" id="btn-nav" type="submit">Contact Me</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    {{#if messages.success}}
+    <div class="alert alert-success text-center m-0" role="alert">
+        <strong>{{messages.success}}</strong>
+    </div>
+    {{/if}}
+
+    {{#if messages.danger}}
+    <div class="alert alert-danger text-center m-0" role="alert">
+        <strong>{{messages.danger}}</strong>
+    </div>
+    {{/if}}
+      <!-- Kontent -->
+        <div class="p-3 mb-2 text-emphasis-dark ">
+            <div class="d-flex justify-content-center bg-gray" >
+                <div class="card p-2 m-5 shadow-lg" >
+                    <div class="row g-0 p-5 gap-4">
+                        <div class="col-md-7 gap-4">
+                            <!-- kontain isi -->
+                            <div class="card-body pb-3">
+                                <p class="card-title fs-3 fw-bold">Hello Welcome to my Hut<p>
+                                <p class="card-text text-break">To all of my friends, allow me to make an introduction to who I am. My full name is David Beckham. People usually call me David. I’m the second child in my family. I was born in Jakarta, on July 14th, 1999. Currently, I live in Tebet, South Jakarta.
+                                    I really like music and I can play some musical instruments like guitar, piano, and bass. Besides that, I am also interested in Graphic Design. Currently, I have a portfolio of professional graphic design for social media, PowerPoint, and so on. I think thats all from me. Nice to meet you. Thank you!
+                                    To all of my friends, allow me to make an introduction to who I am. My full name is David Beckham. People usually call me David. I’m the second child in my family. I was born in Jakarta, on July 14th, 1999. Currently, I live in Tebet, South Jakarta.
+                                </p>
+                            </div>
+                            <!-- button contact dan download -->
+                            <div class="d-flex gap-4 pb-3 ms-3 w-3">
+                                <button type="button" class="btn btn-dark rounded-pill" >Contact</button>
+                                <a href="contact.html" download class="text-dark text-decoration-none"> download CV
+                                    <img class="cd2-icon" style="width: 30px; height: 20px;" src="assets/icon/download.png" alt="icon download">
+                                </a>
+                            </div>
+    
+                            <!-- icon -->
+                            <div class="d-flex gap-4 m-3" id="btn-icon" s>
+                                <a href=""><i class="fa-brands fa-linkedin fa-2xl sos-link"></i></a>
+                                <a href="https://instagram.com/sahal.mubarok?igshid=MzMyNGUyNmU2YQ=="><i class="fa-brands fa-instagram fa-2xl sos-link"></i></a>
+                                <a href="https://www.facebook.com/Muhammadsahalmubarok?mibextid=rS40aB7S9Ucbxw6v"><i class="fa-brands fa-facebook fa-2xl sos-link"></i></a>
+                                <a href="https://x.com/SahalMubarokk?t=wraf-NsqgZ7lKu8z6DOsvw&s=09 "><i class="fa-brands fa-twitter fa-2xl sos-link"></i></a>
+                            </div>
+                        </div>
+    
+                        <!-- konten kanan -->
+                        <!-- foto dan nama -->
+                        <div class="card col-md-4 col-h-3 shadow-lg rounded">
+                            <img src="/assets/image/sahal.jpg" class="" alt="foto sahal">
+                            <div class="card-body m-25px m-2">
+                                <h5 class="card-title text-center fw-bold">Muhamad Sahal Mubarok</h5>
+                                <p class="card-text text-center">Fullstack Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{#if data}}
+    <!-- My Project -->
+    <div class="col" id="judul">
+        <div class="d-flex justify-content-center mt-5">
+            <h1>MY PROJECT</h1>
+        </div>
+
+        <div class="d-flex justify-content-end me-5">
+            <a href="/addmyproject">
+                <button class="btn btn-primary" id="btn-addP" type="submit">Add New Project</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 p-5 flex-wrap" id="contents-in">
+
+        <!-- disini akan diisi konten -->
+
+        {{#each data}}
+        <div class="col">
+            <div class="card h-100 p-4" id="fullCard">
+                <img src="/{{this.image}}" class="card-img-top" alt=".">
+                <div class="card-body">
+                    <a class="ttl-link" href="/myproject-detail/{{this.id}}">
+                        <h4 class="card-title" id="card-ttl">{{this.name}}</h4>
+                    </a>
+                    {{!-- duration --}}
+                    <p class="card-text">Author : {{this.author}} </p>
+                    <p class="card-text" id="duration"> Durasi : <span id="duration-{{@index}}">{{waktu this.start_date
+                            this.end_date}}</span></p>
+
+
+                    <p class="card-text">{{this.description}}</p>
+
+
+                    <div class="row mb-4 gap-1" id="icon">
+                        {{#if this.technologies}}
+                        {{#each this.technologies}}
+                        <div class="col-md-auto"><img src="/assets/icon/{{this}}.png"></div>
+                        {{/each}}
+                        {{/if}}
+                    </div>
+
+
+                    {{!-- {{#if isLogin}} --}}
+                    <div class="row" id="btn-aksi">
+                        <div class="col-md-6 mb-3">
+                            <a href="/update-myproject/{{this.id}}" class="btn btn-primary" id="btn-edit">Edit</a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <form method="post" action="/delete-MP/{{this.id}}">
+                                <button class="btn btn-primary" id="btn-dlt">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    {{!-- {{else}}
+                    <div class="row" id="btn-aksi">
+                        <div class="col-md-6 mb-3">
+                            <a href="/update-myproject/{{this.id}}" class="btn btn-primary disabled"
+                                id="btn-edit">Edit</a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <form method="post" action="/delete-MP/{{this.id}}">
+                                <button class="btn btn-primary disabled" id="btn-dlt">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    {{/if}} --}}
+
+
+
+                </div>
+            </div>
+        </div>
+        <script>
+            // Ambil tanggal start_date dan end_date dari data
+            var startDate = "{{this.start_date}}";
+            var endDate = "{{this.end_date}}";
+
+            // Hitung durasi antara start_date dan end_date
+            var calculatedDuration = waktu(startDate, endDate);
+
+            // Tampilkan durasi pada elemen span
+            document.getElementById('duration-{{@index}}').innerText = calculatedDuration;
+            console.log("duration-{{@index}}", calculatedDuration) 
+        </script>
+        {{/each}}
+
+    </div>
+    {{/if}}
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* * navbar */
+#btn-nav {
+    background-color: orangered;
+}
+
+#btn-nav:hover {
+    opacity: 0.7;
+}
+
+.nav-item a:hover {
+    color: orangered;
+    font-weight: bolder;
+}
+
+.nav-item .active {
+    color: orangered !important;
+}
+
+/* content */
+#all-btn button {
+    background-color: #111727;
+}
+
+#all-btn button:hover {
+    background-color: orangered;
+}
+
+#full-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#full-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.quote {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-weight: bold;
+    text-align: right;
+}

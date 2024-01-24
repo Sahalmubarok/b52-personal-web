@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* navbar */
+#btn-nav {
+    background-color: orangered;
+}
+
+#btn-nav:hover {
+    opacity: 0.7;
+}
+
+.nav-item a:hover {
+    color: orangered;
+    font-weight: bolder;
+}
+
+.nav-item .active {
+    color: orangered !important;
+}
+
+/* body */
+#bg-based {
+    background-color: #dce0e4;
+}
+
+#card-lg {
+    max-width: 80%;
+    background-color: white;
+    box-shadow: 0.3em 0.3em 1.3em black;
+}
+
+#card-bdy h4 {
+    font-weight: bolder;
+}
+
+#cardtxt {
+    text-align: justify;
+}
+
+#card-btn {
+    max-width: fit-content;
+    align-items: center;
+}
+
+#btn-ctc {
+    background: #111727;
+}
+
+#btn-ctc:hover {
+    background-color: orangered;
+}
+
+#card-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+#icon {
+    width: 100%;
+}
+
+#icon a {
+    color: black;
+    object-fit: contain;
+}
+
+#icon a:hover {
+    color: orangered;
+}
+
+
+#card-fp {
+    box-shadow: 0.3em 0.3em 1em black;
+}
+
+#card-id {
+    text-align: center;
+}
+
+#card-id h4 {
+    font-weight: bolder;
+}
+
+#card-id p {
+    font-size: 18px;
+}
+
+.sos-link {
+    color: black
+}
+
+/* my project */
+#btn-addP {
+    background-color: orangered;
+}
+
+#btn-addP:hover {
+    opacity: 0.7;
+}
+
+#judul {
+    background-color: white
+}
+
+#contents-in {
+    background-color: white;
+}
+
+#fullCard {
+    box-shadow: 0.1em 0.1em 0.5em black;
+}
+
+.ttl-link {
+    text-decoration: none;
+    color: black;
+}
+
+#card-ttl {
+    font-weight: bolder;
+}
+
+#duration {
+    color: #868686;
+}
+
+#btn-aksi button {
+    width: 100%;
+    background-color: #111727;
+}
+
+#btn-aksi button:hover {
+    background-color: orangered;
+}
+
+#icon img {
+    height: 35px;
+    object-fit: contain;
+}
+
+#btn-aksi #btn-edit {
+    width: 100%;
+    background-color: #111727;
+}
+
+#btn-aksi #btn-edit:hover {
+    background-color: orangered;
+}
